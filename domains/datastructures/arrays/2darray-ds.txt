@@ -1,0 +1,11 @@
+Start.
+Pipe in 2d array data.
+Map to x and y coordinates.
+Create maxHourglass int variable.
+Iterate through y coordinate.
+Iterate through x coordinate.
+Create hourres in variable.
+If hourres is greater than maxHourglass set maxHourglass equal to hourres.
+Create and deploy getHourglass variable.
+Return all array values summed.
+Complete.
