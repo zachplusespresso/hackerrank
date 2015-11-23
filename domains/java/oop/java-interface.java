@@ -1,32 +1,45 @@
 import java.util.*;
-abstract class Book
-{
-   String title;
-   abstract void setTitle(String s);
-   String getTitle()
-   {
-      return title;
-   }
-
+interface AdvancedArithmetic{
+  public abstract int divisorSum(int n);
 }
 
-class MyBook extends Book{
-   void setTitle(String s) {
-       title=s;
-   }
-}
+    //Solution starts
+    class MyCalculator implements AdvancedArithmetic{
+          public int divisorSum(int n)
+          {
+              int ans=0;
+              for(int i=1;i<=n;i++)
+              {
+                  if(n%i==0) ans+=i;
+              }
+              return ans;
+          }
+    }
+    //Solution ends
 
-public class Main
-{
+    class Solution{
 
-   public static void main(String []args)
-   {
-      //Book new_novel=new Book(); This line prHMain.java:25: error: Book is abstract; cannot be instantiated
-      Scanner sc=new Scanner(System.in);
-      String title=sc.nextLine();
-      MyBook new_novel=new MyBook();
-      new_novel.setTitle(title);
-      System.out.println("The title is: "+new_novel.getTitle());
+    public static void main(String []argh)
+    {
+        MyCalculator my_calculator=new MyCalculator();
+        System.out.print("I implemented: ");
+        ImplementedInterfaceNames(my_calculator);
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.print(my_calculator.divisorSum(n)+"\n");
 
-   }
+    }
+    /*
+     *  ImplementedInterfaceNames method takes an object and prints the name of the interfaces it implemented
+     */
+    static void ImplementedInterfaceNames(Object o)
+    {
+
+        Class[] theInterfaces = o.getClass().getInterfaces();
+        for (int i = 0; i < theInterfaces.length; i++)
+        {
+            String interfaceName = theInterfaces[i].getName();
+            System.out.println(interfaceName);
+        }
+    }
 }

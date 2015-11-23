@@ -1,0 +1,32 @@
+Imports from libraries.
+
+
+
+
+
+The solution class.
+
+Main method declaration with "throw Exception"
+Create a BufferedReader named "br" that takes the InputStreamReader data from System.in
+Create a PrintWriter named "pw" that outputs to System.out
+Create a StringTokenizer named "st" that pulls from "br" with br.readLine().
+Create integer N and pipe in integers with Integer.parseInt(st.nextToken)
+Create integer t and pipe in integers with Integer.parseInt(st.nextToken)
+Create array r with N's data.
+create st = newStringTokenizer with br.readLine
+for loop that iterates through r array and fills it with array
+using parseInt(st.nextToken
+)
+while loop that starts t -- > 0
+creates a st variable that is set to StringTokenizer(br.readLine)
+create integer i that is set to Integer.parseInt(st.nextToken)
+create integer j that is set to Integer.parseInt(st.nextToken)
+create integer mini set to 3
+for loop that starts at i and is less than j
+set mini = to Math.min(mini, r[k]); this takes the array r and compares it to mini of 3
+}
+print the product of mini which has been compared to the array to determine the minimum size
+}
+pw.flush() to output the result.
+}
+}
